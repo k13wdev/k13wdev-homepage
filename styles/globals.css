@@ -28,10 +28,6 @@
     @apply transition-colors duration-300 ease-in hover:text-lime
   }
 
-  .gif {
-    @apply w-max
-  }
-
   .greeting {
     @apply py-2 md:py-5 w-full text-sm md:text-xl font-semibold text-center bg-white bg-opacity-25 rounded-lg shadow-2xl
   }
@@ -128,9 +124,6 @@
     @apply grid gap-6 md:gap-x-12 justify-items-center md:grid-cols-[1fr_min-content]
   }
 
-  .intro__gif {
-    @apply col-start-1 col-end-3 justify-self-center
-  }
 
   .intro__greeting {
     @apply md:col-start-1 md:col-end-2 md:self-center
@@ -141,7 +134,7 @@
   }
 
   .intro__avatar {
-    @apply md:col-start-2 md:col-end-3 md:row-start-2 md:row-end-4
+    @apply md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3
   }
 
   .about {
