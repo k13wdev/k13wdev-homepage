@@ -1,16 +1,172 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@600;700&family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-white bg-dark-800 
+  }
+  
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@layer components {
+  .logo {
+    @apply font-vt323 text-3xl md:text-5xl text-yellow 
+  }
+
+  .navbar {
+    @apply flex items-center
+  }
+
+  .menu-list {
+    @apply text-2xl
+  }
+
+  .menu-list  a {
+    @apply transition-colors duration-300 ease-in hover:text-lime
+  }
+
+  .gif {
+    @apply w-max
+  }
+
+  .greeting {
+    @apply py-2 md:py-5 w-full text-sm md:text-xl font-semibold text-center bg-white bg-opacity-25 rounded-lg shadow-2xl
+  }
+
+  .name {
+    @apply text-2xl md:text-4xl
+  }
+
+  .avatar {
+    @apply w-40 aspect-square rounded-full overflow-hidden drop-shadow-2xl
+  }
+
+  .title {
+    @apply relative pr-4 w-max font-vt323 text-2xl md:text-4xl text-yellow tracking-widest after:absolute after:block after:w-full after:h-1 after:bg-jade
+  }
+
+  .text {
+    @apply max-w-md md:max-w-xl text-sm md:text-xl font-semibold
+  }
+
+  .numbered-list {
+    @apply grid grid-cols-2 md:grid-cols-3 gap-x-8 md:gap-x-16 gap-y-5 max-w-md md:max-w-xl text-sm md:text-xl font-semibold
+  }
+
+  .numbered-list li > [aria-hidden="true"] {
+    @apply mr-2 font-bold text-lime 
+  }
+
+  .button {
+    @apply px-10 py-3 w-max text-sm md:text-xl bg-jade rounded-lg transition-transform duration-300 ease-in hover:scale-125
+  }
+
+  .bio-list { 
+    @apply text-sm md:text-xl font-semibold
+  }
+
+  .bio-list > * + * {
+    @apply mt-5
+  }
+
+  .bio-list li {
+    @apply flex gap-5 max-w-md md:max-w-xl
+  }
+
+  .bio-list  li > time {
+    @apply text-lime font-bold
+  }
+
+  .social-list {
+    @apply  text-sm md:text-lg text-olive underline
+  }
+
+  .social-list > * + * {
+    @apply mt-5
+  }
+
+  .thumbnail {
+    @apply flex flex-col gap-4
+  }
+
+  .thumbnail img {
+    @apply w-full aspect-video
+  }
+
+  .thumbnail h3 {
+    @apply text-xl font-bold text-yellow
+  }
+
+  .thumbnail p {
+    @apply text-lg font-semibold
+  }
+
+  .thumbnail a {
+    @apply mt-auto text-lg font-semibold text-olive
+  }
+
+  .header {
+    @apply relative flex items-center h-28 bg-dark-900
+  }
+
+  .header__wrapper {
+    @apply flex justify-between
+  }
+
+  .main__wrapper > * {
+    @apply mt-12 
+  }
+
+  .main__wrapper:last-child {
+    @apply mb-12
+  }
+
+  .intro {
+    @apply grid gap-6 md:gap-x-12 justify-items-center md:grid-cols-[1fr_min-content]
+  }
+
+  .intro__gif {
+    @apply col-start-1 col-end-3 justify-self-center
+  }
+
+  .intro__greeting {
+    @apply md:col-start-1 md:col-end-2 md:self-center
+  }
+
+  .intro__name {
+    @apply md:col-start-1 md:col-end-2 md:justify-self-start
+  }
+
+  .intro__avatar {
+    @apply md:col-start-2 md:col-end-3 md:row-start-2 md:row-end-4
+  }
+
+  .about {
+    @apply grid gap-y-6
+  }
+
+  .about__button {
+    @apply justify-self-center
+  }
+
+  .bio > * {
+    @apply mt-5
+  }
+
+  .social > * {
+    @apply mt-5
+  }
+  
+  .work__wrapper {
+    @apply grid md:grid-cols-2 gap-6
+  }
 }
 
-* {
-  box-sizing: border-box;
+@layer components {
+  .container {
+    @apply max-w-screen-md
+  }
 }
