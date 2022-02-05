@@ -5,8 +5,16 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply h-screen
+  }
+
   body {
-    @apply font-sans text-white bg-dark-800 
+    @apply h-full font-sans text-white bg-dark-800 
+  }
+
+  body > div {
+    @apply h-full grid grid-rows-[1fr_min-content]
   }
   
 }
@@ -17,19 +25,39 @@
   }
 
   .navbar {
-    @apply flex items-center
+    @apply flex content-center
   }
 
   .menu-list {
-    @apply text-2xl
+    @apply absolute top-full md:static py-5 md:py-0 flex flex-col md:flex-row gap-10 text-2xl text-center bg-dark-800 md:bg-transparent shadow-xl md:shadow-none z-10 transition-all duration-300 ease-in-out
+  }
+
+  .menu-list.isOpen {
+    @apply inset-x-0
+  }
+
+  .menu-list.isClose {
+    @apply -right-full
+  }
+
+  .menu-list > li {
+    @apply flex justify-center items-center
   }
 
   .menu-list  a {
     @apply transition-colors duration-300 ease-in hover:text-lime
   }
 
+  .button-menu {
+    @apply block md:hidden
+  }
+
   .greeting {
-    @apply py-2 md:py-5 w-full text-sm md:text-xl font-semibold text-center bg-white bg-opacity-25 rounded-lg shadow-2xl
+    @apply py-2 md:py-5 flex justify-center w-full bg-white bg-opacity-25 rounded-lg shadow-2xl
+  }
+
+  .greeting__text {
+    @apply text-sm md:text-lg font-semibold
   }
 
   .name {
@@ -60,6 +88,11 @@
     @apply px-10 py-3 w-max text-sm md:text-xl bg-jade rounded-lg transition-transform duration-300 ease-in hover:scale-125
   }
 
+  .blinking-cursor::after {
+    content: '|';
+    @apply text-lime animate-ping duration-200
+  }
+
   .bio-list { 
     @apply text-sm md:text-xl font-semibold
   }
@@ -84,34 +117,22 @@
     @apply mt-5
   }
 
-  .thumbnail {
-    @apply flex flex-col gap-4
-  }
-
-  .thumbnail img {
-    @apply w-full aspect-video
-  }
-
-  .thumbnail h3 {
-    @apply text-xl font-bold text-yellow
-  }
-
-  .thumbnail p {
-    @apply text-lg font-semibold
-  }
-
-  .thumbnail a {
-    @apply mt-auto text-lg font-semibold text-olive
-  }
-
   .header {
-    @apply relative flex items-center h-28 bg-dark-900
+    @apply fixed inset-x-0 top-0 z-50 flex items-center h-28 transition-all
+  }
+
+  .header--blur {
+    @apply bg-dark-900 backdrop-blur-lg bg-opacity-75
   }
 
   .header__wrapper {
     @apply flex justify-between
   }
 
+  .main__wrapper {
+    @apply mt-40
+  }
+  
   .main__wrapper > * {
     @apply mt-12 
   }
@@ -151,6 +172,10 @@
 
   .social > * {
     @apply mt-5
+  }
+
+  .footer {
+    @apply py-4 flex justify-center text-xs
   }
   
   .work__wrapper {

@@ -1,7 +1,8 @@
 import Head from "next/head"
+import Footer from "./footer"
 import Header from "./header"
 
-const Layout = ({children, title}) => {
+const Layout = ({title, children}) => {
   return (
     <>
       <Head>
@@ -15,6 +16,8 @@ const Layout = ({children, title}) => {
       <mian>
         {children}
       </mian>
+
+      <Footer/>
     </>
   )
 }

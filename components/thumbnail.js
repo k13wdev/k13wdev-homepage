@@ -1,14 +1,13 @@
-const Thumbnail = ({img, title, desc, href}) => {
+const Thumbnails = (props) => {
   return (
     <>
-      <article className="thumbnail">
-        <img src={img}/>
-        <h3>{title}</h3>
-        <p>{desc}</p>
-        <a href={href} target="_blank" rel="noreferrer">Source</a>
+      <article>
+        <img src={props.src}/>
+        <h3>{props.title}</h3>
+        <p>{props.description}</p>
       </article>
     </>
   )
 }
 
-export default Thumbnail
+export default Thumbnails

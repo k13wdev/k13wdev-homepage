@@ -4,11 +4,11 @@ const Social = () => {
       <h2 className="title">On the web</h2>
       <ul className="social-list">
         <li>
-          <a href="kirillbogomolow@yandex.ru">kirillbogomolow@yandex.ru</a>
+          <a href="https://t.me/k13wdev" target="_blank" rel="noreferrer">My Telegram</a>
         </li>
 
         <li>
-          <a href="https://github.com/KBogomolov" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://github.com/KBogomolov" target="_blank" rel="noreferrer">My GitHub</a>
         </li>
       </ul>
     </section>
