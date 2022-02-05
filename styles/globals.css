@@ -57,7 +57,7 @@
   }
 
   .greeting__text {
-    @apply text-sm md:text-lg font-semibold
+    @apply text-sm md:text-lg font-semibold text-center
   }
 
   .name {
@@ -175,7 +175,7 @@
   }
 
   .footer {
-    @apply py-4 flex justify-center text-xs
+    @apply py-4 flex justify-center text-xs text-center
   }
   
   .work__wrapper {
