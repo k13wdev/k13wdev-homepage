@@ -1,7 +1,10 @@
-const Thumbnails = (props) => {
+import { Router } from "next/router"
+
+const Thumbnail = (props) => {
+
   return (
     <>
-      <article>
+      <article className="thumbnail">
         <img src={props.src}/>
         <h3>{props.title}</h3>
         <p>{props.description}</p>
@@ -10,4 +13,4 @@ const Thumbnails = (props) => {
   )
 }
 
-export default Thumbnails
+export default Thumbnail

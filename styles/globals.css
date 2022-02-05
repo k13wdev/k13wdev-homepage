@@ -117,6 +117,18 @@
     @apply mt-5
   }
 
+  .thumbnail > * + * {
+    @apply mt-3
+  }
+
+  .thumbnail > img {
+    @apply w-full aspect-video bg-white
+  }
+
+  .thumbnail > h3 {
+    @apply text-lg font-bold text-lime
+  }
+
   .header {
     @apply fixed inset-x-0 top-0 z-50 flex items-center h-28 transition-all
   }
@@ -174,13 +186,15 @@
     @apply mt-5
   }
 
+  .work__wrapper {
+    @apply grid md:grid-cols-2 gap-10
+  }
+
   .footer {
     @apply py-4 flex justify-center text-xs text-center
   }
   
-  .work__wrapper {
-    @apply grid md:grid-cols-2 gap-6
-  }
+  
 }
 
 @layer components {
