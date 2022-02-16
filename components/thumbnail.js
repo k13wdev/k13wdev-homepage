@@ -6,7 +6,7 @@ const Thumbnail = (props) => {
   return (
     <>
       <article className="thumbnail">
-        <Image src={props.img} alt={props.alt}/>
+        <Image src={props.img} alt={props.alt} width={332} height={186.75} layout="responsive"/>
         <h3>{props.title}</h3>
         <p>{props.description}</p>
         <div>
