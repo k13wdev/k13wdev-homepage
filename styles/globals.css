@@ -129,6 +129,10 @@
     @apply text-lg font-bold text-lime
   }
 
+  .thumbnail > div {
+    @apply flex gap-10 font-vt323 text-2xl text-jade uppercase
+  }
+
   .header {
     @apply fixed inset-x-0 top-0 z-50 flex items-center h-28 transition-all
   }

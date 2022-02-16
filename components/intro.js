@@ -20,7 +20,7 @@ const Intro = () => {
       </div>
       <h2 className="name intro__name">Kirill Bogomolov</h2>
       <div className="avatar intro__avatar">
-        <Image src="/avatar.jpg" width="160" height="160"/>
+        <Image src="/avatar.jpg" width="160" height="160" alt="this is me"/>
       </div>
     </section>
   )

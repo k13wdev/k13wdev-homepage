@@ -1,7 +1,7 @@
-import Layout from '../../components/layout'
-import Thumbnail from '../../components/thumbnail'
+import Layout from '../components/layout'
+import Thumbnail from '../components/thumbnail'
 
-import { works } from '../../utils/const'
+import { works } from '../utils/const'
 
 const Work = () => {
 
@@ -14,9 +14,7 @@ const Work = () => {
             works
               .map((work, idx) => {
                 return (
-                  <Link href={`/wroks${}`}>
-                    <Thumbnail key={idx} src={work.src} title={work.title}/>
-                  </Link>
+                  <Thumbnail key={idx} img={work.img} alt={work.alt} title={work.title} description={work.description} view={work.view} src={work.src}/>
                 )
               })
           }      

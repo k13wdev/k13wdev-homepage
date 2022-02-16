@@ -1,14 +1,20 @@
+import Link from "next/link";
+
 const Social = () => {
   return (
     <section className="social">
       <h2 className="title">On the web</h2>
       <ul className="social-list">
         <li>
-          <a href="https://t.me/k13wdev" target="_blank" rel="noreferrer">My Telegram</a>
+          <Link href="https://t.me/k13wdev">
+            <a target="_blank" rel="noreferrer">My Telegram</a>
+          </Link>
         </li>
 
         <li>
-          <a href="https://github.com/KBogomolov" target="_blank" rel="noreferrer">My GitHub</a>
+          <Link href="https://github.com/KBogomolov">
+            <a target="_blank" rel="noreferrer">My GitHub</a>
+          </Link>
         </li>
       </ul>
     </section>
