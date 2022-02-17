@@ -28,7 +28,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link href="https://github.com/KBogomolov">
+          <Link href="https://github.com/k13wdev">
             <a target="_blank">GitHub</a>
           </Link>
         </li>
